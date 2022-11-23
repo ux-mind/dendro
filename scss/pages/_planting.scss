@@ -1,0 +1,18 @@
+.planting {
+	overflow: hidden;
+	& .questions {
+		& .blur {
+			filter: blur(150px);
+			top: auto;
+			bottom: -40px;
+			transform: translateX(calc(-50% + 80px)) rotate(-37deg);
+			& svg {
+				max-width: 615px;
+			}
+		}
+	}
+	&-header {
+		background: image('planting-img_01.jpg') no-repeat 50% / cover;
+		margin-bottom: 100px;
+	}
+}

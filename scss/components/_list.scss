@@ -1,0 +1,12 @@
+.list {
+	& li {
+		padding-left: 15px;
+		position: relative;
+		@include font(1.6rem, calc(24 / 16));
+		&::before {
+			@include before(0, 5px, 5px);
+			background: $green-700;
+			border-radius: 1px;
+		}
+	}
+}

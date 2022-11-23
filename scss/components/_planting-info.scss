@@ -1,0 +1,30 @@
+.planting-info {
+	padding-bottom: 100px;
+	& p {
+		margin-bottom: 15px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	&__img {
+		padding-top: 25px;
+		margin-bottom: 40px;
+	}
+	&__list {
+		margin: 0;
+		padding: 0;
+		margin-bottom: 15px;
+		& p {
+			@include font(1.6rem, calc(24 / 16));
+			margin: 0;
+			margin-bottom: 10px;
+			font-weight: 500;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.planting-info {
+		padding-bottom: 90px;
+	}
+}

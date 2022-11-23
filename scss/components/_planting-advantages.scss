@@ -1,0 +1,33 @@
+.planting-advantages {
+	position: relative;
+	padding-bottom: 100px;
+	& .product-info__parameters {
+		display: block;
+		position: relative;
+		&-wrapper {
+			grid-row-gap: 0;
+			@include flex(column, normal, space-between, wrap);
+			max-height: 300px;
+		}
+	}
+	& .product-deliver-step::before {
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	& .product-deliver-step__title {
+		margin: 0;
+	}
+	& .product-deliver-step:first-child,
+	& .product-deliver-step:nth-child(4) {
+		border-top: 1px solid $border-dark-color;
+	}
+	& .product-deliver-step {
+		padding: 30px 0;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.planting-advantages {
+		padding-bottom: 90px;
+	}
+}

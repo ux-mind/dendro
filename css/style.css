@@ -570,6 +570,24 @@ p {
     padding: 12px 20px 15px;
   }
 }
+.list li {
+  padding-left: 15px;
+  position: relative;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  transform: translateY(-50%);
+  background: #90c200;
+  border-radius: 1px;
+}
+
 .section {
   padding-top: 150px;
 }
@@ -1569,8 +1587,7 @@ p {
   border: 1px solid rgba(30, 30, 30, 0.2);
   table-layout: fixed;
 }
-.delivery-option td,
-.delivery-option th {
+.delivery-option td, .delivery-option th {
   border: 1px solid rgba(30, 30, 30, 0.2);
 }
 .delivery-option__img {
@@ -1676,6 +1693,23 @@ p {
     padding-left: 20px;
   }
 }
+.planting {
+  overflow: hidden;
+}
+.planting .questions .blur {
+  filter: blur(150px);
+  top: auto;
+  bottom: -40px;
+  transform: translateX(calc(-50% + 80px)) rotate(-37deg);
+}
+.planting .questions .blur svg {
+  max-width: 615px;
+}
+.planting-header {
+  background: url("../assets/images/planting-img_01.jpg") no-repeat 50%/cover;
+  margin-bottom: 100px;
+}
+
 .text_white {
   color: #fff;
 }
@@ -1847,6 +1881,53 @@ p {
     line-height: 1.2857142857;
   }
 }
+.table {
+  border-collapse: collapse;
+  border: 1px solid rgba(30, 30, 30, 0.2);
+  table-layout: fixed;
+}
+.table td, .table th {
+  border: 1px solid rgba(30, 30, 30, 0.2);
+}
+.table td {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #1e1e1e;
+}
+.table__col {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  color: #1e1e1e;
+  padding: 0 10px;
+}
+.table__col:first-child {
+  text-align: left;
+}
+.table__col:not(th) {
+  padding: 4px 14px 6px;
+}
+.table_first .delivery-option__col {
+  width: 21.2280701754%;
+}
+.table_first .delivery-option__col:first-child {
+  width: 33.1578947368%;
+}
+.table_first .delivery-option__col:last-child {
+  width: 24.3859649123%;
+}
+.table_second .delivery-option__col {
+  width: 34.3859649123%;
+}
+.table_second .delivery-option__col:first-child {
+  width: 33.1578947368%;
+}
+.table_second .delivery-option__col:last-child {
+  width: 32.4561403509%;
+}
+
 .breadcrumbs {
   display: flex;
   flex-direction: row;
@@ -4943,6 +5024,158 @@ p {
   .delivery-hero__text p {
     font-size: 1.4rem;
     line-height: 1.5;
+  }
+}
+.planting-hero {
+  padding-top: 170px;
+  position: relative;
+}
+.planting-hero .blur {
+  top: 236px;
+  left: -158px;
+  transform: rotate(51deg);
+}
+
+@media screen and (max-width: 991px) {
+  .delivery-hero {
+    padding-top: 125px;
+  }
+  .delivery-hero .blur {
+    top: 400px;
+    left: 50%;
+    transform: translateX(calc(-50% - 129px)) rotate(-49deg);
+  }
+}
+.planting-advantages {
+  position: relative;
+  padding-bottom: 100px;
+}
+.planting-advantages .product-info__parameters {
+  display: block;
+  position: relative;
+}
+.planting-advantages .product-info__parameters-wrapper {
+  grid-row-gap: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: normal;
+  flex-wrap: wrap;
+  max-height: 300px;
+}
+.planting-advantages .product-deliver-step::before {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.planting-advantages .product-deliver-step__title {
+  margin: 0;
+}
+.planting-advantages .product-deliver-step:first-child, .planting-advantages .product-deliver-step:nth-child(4) {
+  border-top: 1px solid rgba(30, 30, 30, 0.2);
+}
+.planting-advantages .product-deliver-step {
+  padding: 30px 0;
+}
+
+@media screen and (max-width: 991px) {
+  .planting-advantages {
+    padding-bottom: 90px;
+  }
+}
+.planting-info {
+  padding-bottom: 100px;
+}
+.planting-info p {
+  margin-bottom: 15px;
+}
+.planting-info p:last-child {
+  margin-bottom: 0;
+}
+.planting-info__img {
+  padding-top: 25px;
+  margin-bottom: 40px;
+}
+.planting-info__list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+}
+.planting-info__list p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 991px) {
+  .planting-info {
+    padding-bottom: 90px;
+  }
+}
+.planting-price {
+  padding-bottom: 100px;
+}
+.planting-price__title {
+  font-size: 3.2rem;
+  line-height: 1;
+  margin-bottom: 40px;
+}
+.planting-price__wrapper {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+.planting-price__table {
+  min-width: 777px;
+}
+.planting-price__table td:first-child {
+  font-weight: 600;
+  width: 41.8803418803%;
+}
+.planting-price__table td:nth-child(2) {
+  width: 35.2991452991%;
+}
+.planting-price__table td:last-child {
+  width: 22.8205128205%;
+}
+.planting-price__table-wrapper {
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 1220px) {
+  .planting-price__wrapper {
+    max-width: 950px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .planting-price {
+    padding-bottom: 90px;
+  }
+  .planting-price__wrapper {
+    max-width: none;
+    padding-left: calc((100vw - 720px) / 2);
+  }
+  .planting-price__title {
+    padding-right: calc((100vw - 720px) / 2);
+    margin-bottom: 20px;
+    font-size: 2.6rem;
+    line-height: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .planting-price__wrapper {
+    padding-left: calc((100vw - 528px) / 2);
+  }
+  .planting-price__title {
+    padding-right: calc((100vw - 528px) / 2);
+  }
+}
+@media screen and (max-width: 576px) {
+  .planting-price__wrapper {
+    padding-left: 20px;
+  }
+  .planting-price__title {
+    padding-right: 20px;
   }
 }
 

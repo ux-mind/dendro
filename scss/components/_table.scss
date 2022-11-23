@@ -1,2 +1,49 @@
 .table {
+	border-collapse: collapse;
+	border: 1px solid $border-dark-color;
+	table-layout: fixed;
+	& td,
+	& th {
+		border: 1px solid $border-dark-color;
+	}
+	& td {
+		padding: 15px 20px;
+		text-align: left;
+		@include font(1.4rem, calc(21 / 14));
+		color: $black-900;
+	}
+	&__col {
+		text-align: center;
+		@include font(1.4rem, calc(21 / 14));
+		color: $black-900;
+		padding: 0 10px;
+		&:first-child {
+			text-align: left;
+		}
+		&:not(th) {
+			padding: 4px 14px 6px;
+		}
+	}
+	&_first {
+		& .delivery-option__col {
+			width: calc((121 / 570) * 100%);
+			&:first-child {
+				width: calc((189 / 570) * 100%);
+			}
+			&:last-child {
+				width: calc((139 / 570) * 100%);
+			}
+		}
+	}
+	&_second {
+		& .delivery-option__col {
+			width: calc((196 / 570) * 100%);
+			&:first-child {
+				width: calc((189 / 570) * 100%);
+			}
+			&:last-child {
+				width: calc((185 / 570) * 100%);
+			}
+		}
+	}
 }
