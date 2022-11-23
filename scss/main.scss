@@ -12,7 +12,7 @@
 @import './layout/section', './layout/header', './layout/hero', './layout/footer', './layout/main';
 // Import Pages
 @import './pages/home', './pages/catalog', './pages/catalog-section', './pages/product-page', './pages/services',
-	'./pages/delivery', './pages/planting';
+	'./pages/delivery', './pages/planting', './pages/agronom';
 // Import Components
 @import './components/text', './components/blocker', './components/hit.scss', './components/table',
 	'./components/breadcrumbs', './components/catalog', './components/hamburger', './components/dropdown.scss',
@@ -24,4 +24,5 @@
 	'./components/testimonial-modal', './components/testimonial-success', './components/questions',
 	'./components/application-modal', './components/services-section', './components/services-header',
 	'./components/services-item', './components/delivery-hero', './components/planting-hero',
-	'./components/planting-advantages', './components/planting-info', './components/planting-price';
+	'./components/planting-advantages', './components/planting-info', './components/planting-price',
+	'./components/agronom-hero', './components/agronom-info';

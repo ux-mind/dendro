@@ -1,7 +1,10 @@
 .table {
 	border-collapse: collapse;
 	border: 1px solid $border-dark-color;
-	table-layout: fixed;
+	&-wrapper {
+		margin: 0 auto;
+		max-width: 1170px;
+	}
 	& td,
 	& th {
 		border: 1px solid $border-dark-color;
@@ -44,6 +47,39 @@
 			&:last-child {
 				width: calc((185 / 570) * 100%);
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 1220px) {
+	.table {
+		&-wrapper {
+			max-width: 950px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.table {
+		&-wrapper {
+			max-width: none;
+			padding-left: calc((100vw - 720px) / 2);
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.table {
+		&-wrapper {
+			padding-left: calc((100vw - 528px) / 2);
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.table {
+		&-wrapper {
+			padding-left: 20px;
 		}
 	}
 }

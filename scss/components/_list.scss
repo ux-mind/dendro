@@ -3,12 +3,24 @@
 		padding-left: 15px;
 		position: relative;
 		@include font(1.6rem, calc(24 / 16));
+		margin-bottom: 10px;
+		&:last-child {
+			margin-bottom: 0;
+		}
 		&::before {
 			@include before(0, 5px, 5px);
 			transform: none;
 			top: 10px;
 			background: $green-700;
 			border-radius: 1px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.list {
+		& li {
+			@include font(1.4rem, calc(21 / 14));
 		}
 	}
 }

@@ -91,6 +91,7 @@ ol {
 }
 p {
 	margin: 0;
+	@include font(1.6rem, calc(24 / 16));
 }
 ::-webkit-input-placeholder {
 	font-size: 1.6rem;

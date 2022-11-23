@@ -90,6 +90,8 @@ ol {
 
 p {
   margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
 
 ::-webkit-input-placeholder {
@@ -575,6 +577,10 @@ p {
   position: relative;
   font-size: 1.6rem;
   line-height: 1.5;
+  margin-bottom: 10px;
+}
+.list li:last-child {
+  margin-bottom: 0;
 }
 .list li::before {
   content: "";
@@ -590,6 +596,12 @@ p {
   border-radius: 1px;
 }
 
+@media screen and (max-width: 991px) {
+  .list li {
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+}
 .section {
   padding-top: 150px;
 }
@@ -1733,6 +1745,52 @@ p {
     max-width: 542px;
   }
 }
+.agronom {
+  overflow: hidden;
+}
+.agronom .questions .blur {
+  filter: blur(150px);
+  top: auto;
+  bottom: -40px;
+  transform: translateX(calc(-50% + 80px)) rotate(-37deg);
+}
+.agronom .questions .blur svg {
+  max-width: 615px;
+}
+.agronom-header {
+  background: url("../assets/images/agronom-img_01.jpg") no-repeat 50%/cover;
+  margin-bottom: 100px;
+}
+.agronom-text {
+  margin-bottom: 90px;
+}
+.agronom-text p {
+  margin-bottom: 15px;
+}
+.agronom-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .agronom .questions .blur {
+    top: -95px;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(calc(-50% + 135px)) rotate(144deg);
+    filter: blur(100px);
+  }
+  .agronom .questions .blur svg {
+    max-width: 542px;
+  }
+  .agronom-text p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .agronom-text p:last-child {
+    margin-bottom: 0;
+  }
+}
 .text_white {
   color: #fff;
 }
@@ -1907,7 +1965,10 @@ p {
 .table {
   border-collapse: collapse;
   border: 1px solid rgba(30, 30, 30, 0.2);
-  table-layout: fixed;
+}
+.table-wrapper {
+  margin: 0 auto;
+  max-width: 1170px;
 }
 .table td, .table th {
   border: 1px solid rgba(30, 30, 30, 0.2);
@@ -1951,6 +2012,27 @@ p {
   width: 32.4561403509%;
 }
 
+@media screen and (max-width: 1220px) {
+  .table-wrapper {
+    max-width: 950px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .table-wrapper {
+    max-width: none;
+    padding-left: calc((100vw - 720px) / 2);
+  }
+}
+@media screen and (max-width: 767px) {
+  .table-wrapper {
+    padding-left: calc((100vw - 528px) / 2);
+  }
+}
+@media screen and (max-width: 767px) {
+  .table-wrapper {
+    padding-left: 20px;
+  }
+}
 .breadcrumbs {
   display: flex;
   flex-direction: row;
@@ -5270,6 +5352,117 @@ p {
   }
   .planting-price__title {
     padding-right: 20px;
+  }
+}
+.agronom-hero {
+  padding-top: 170px;
+  position: relative;
+}
+.agronom-hero .blur {
+  top: 236px;
+  left: -158px;
+  transform: rotate(51deg);
+}
+
+@media screen and (max-width: 991px) {
+  .agronom-hero {
+    padding-top: 125px;
+  }
+  .agronom-hero .blur {
+    top: 687px;
+    left: 50%;
+    transform: translateX(calc(-50% - 129px)) rotate(-49deg);
+  }
+}
+.agronom-info {
+  padding-bottom: 125px;
+  overflow: hidden;
+  position: relative;
+}
+.agronom-info .blur {
+  display: none;
+}
+.agronom-info__list {
+  margin-top: 50px;
+}
+.agronom-info__list:first-child {
+  margin-top: 0;
+}
+.agronom-info__list-title {
+  margin-bottom: 20px;
+}
+.agronom-info__table {
+  min-width: 444px;
+}
+.agronom-info__table th {
+  padding: 15px 20px;
+  text-align: left;
+}
+.agronom-info__table td:first-child {
+  font-weight: 600;
+  width: 41.8803418803%;
+}
+.agronom-info__table td:last-child {
+  width: 58.1196581197%;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+.agronom-info__table .table__row td {
+  font-weight: 400;
+}
+.agronom-info__table-wrapper {
+  margin-top: 40px;
+  overflow-y: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .agronom-info {
+    padding-bottom: 90px;
+  }
+  .agronom-info__table-wrapper {
+    margin-top: 30px;
+  }
+  .agronom-info__list {
+    margin-top: 90px;
+  }
+  .agronom-info__list-title {
+    font-size: 2.6rem;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  .agronom-info .table-wrapper {
+    max-width: 720px;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .agronom-info .blur {
+    display: block;
+    filter: blur(100px);
+    top: auto;
+    bottom: 355px;
+    left: 50%;
+    transform: translateX(calc(-50% + 135px)) rotate(144deg);
+  }
+  .agronom-info .blur svg {
+    max-width: 542px;
+  }
+  .agronom-info .table-wrapper {
+    max-width: 528px;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .agronom-info .table-wrapper {
+    max-width: none;
+    padding-left: 20px;
+  }
+  .agronom-info__table td:first-child {
+    width: auto;
+    width: 106px;
+  }
+  .agronom-info__table td:last-child {
+    width: calc(100% - 106px);
   }
 }
 
