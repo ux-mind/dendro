@@ -63,6 +63,17 @@
 
 @media screen and (max-width: 991px) {
 	.services {
+		&-mobile-content {
+			& a {
+				display: inline;
+				text-decoration: underline;
+				text-align: right;
+				align-self: flex-end;
+				&::before {
+					content: none;
+				}
+			}
+		}
 		&-section {
 			padding-top: 125px;
 			padding-bottom: 0;

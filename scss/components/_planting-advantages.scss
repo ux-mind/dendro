@@ -29,5 +29,23 @@
 @media screen and (max-width: 991px) {
 	.planting-advantages {
 		padding-bottom: 90px;
+		& .product-info__parameters {
+			&-wrapper {
+				max-height: none;
+				flex-wrap: nowrap;
+			}
+		}
+		& .product-deliver-step {
+			padding: 16px 0;
+		}
+		& .product-deliver-step:nth-child(4) {
+			border-top: none;
+		}
+		& .product-deliver-step:nth-last-of-type(2) {
+			border-bottom: 1px solid $border-dark-color;
+		}
+		& .product-deliver-step__title {
+			@include font(1.6rem, calc(19 / 16));
+		}
 	}
 }

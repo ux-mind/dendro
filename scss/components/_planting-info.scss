@@ -1,10 +1,27 @@
 .planting-info {
 	padding-bottom: 100px;
+	position: relative;
+	& .blur {
+		top: 549px;
+		right: -155px;
+		transform: rotate(-37deg);
+		filter: blur(180px);
+		& svg {
+			max-width: 615px;
+		}
+	}
 	& p {
 		margin-bottom: 15px;
 		&:last-child {
 			margin-bottom: 0;
 		}
+	}
+	&__title {
+		@include font(3.2rem, 1);
+		margin-bottom: 40px;
+	}
+	&__wrapper {
+		position: relative;
 	}
 	&__img {
 		padding-top: 25px;
@@ -26,5 +43,38 @@
 @media screen and (max-width: 991px) {
 	.planting-info {
 		padding-bottom: 90px;
+		& .blur {
+			top: auto;
+			bottom: 356px;
+			right: 50%;
+			transform: translateX(calc(50% + 148px)) rotate(144deg);
+			filter: blur(100px);
+			& svg {
+				max-width: 542px;
+			}
+		}
+		&__title {
+			@include font(2.6rem, 1);
+			margin-bottom: 20px;
+		}
+		&__img {
+			padding-top: 5px;
+			margin-bottom: 15px;
+		}
+		& p {
+			@include font(1.4rem, calc(21 / 14));
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		&__list {
+			margin-bottom: 10px;
+			& p {
+				@include font(1.4rem, calc(21 / 14));
+				margin-bottom: 10px;
+				font-weight: 500;
+			}
+		}
 	}
 }

@@ -16,3 +16,20 @@
 		margin-bottom: 100px;
 	}
 }
+
+@media screen and (max-width: 991px) {
+	.planting {
+		& .questions {
+			& .blur {
+				top: -95px;
+				bottom: auto;
+				left: 50%;
+				transform: translateX(calc(-50% + 135px)) rotate(144deg);
+				filter: blur(100px);
+				& svg {
+					max-width: 542px;
+				}
+			}
+		}
+	}
+}
