@@ -572,6 +572,9 @@ p {
     padding: 12px 20px 15px;
   }
 }
+.list p:first-child {
+  margin-bottom: 10px;
+}
 .list li {
   padding-left: 15px;
   position: relative;
@@ -1762,6 +1765,7 @@ p {
   margin-bottom: 100px;
 }
 .agronom-text {
+  position: relative;
   margin-bottom: 90px;
 }
 .agronom-text p {
@@ -1788,6 +1792,60 @@ p {
     margin-bottom: 10px;
   }
   .agronom-text p:last-child {
+    margin-bottom: 0;
+  }
+}
+.treatment {
+  overflow: hidden;
+}
+.treatment .questions .blur {
+  filter: blur(160px);
+  top: 0;
+  transform: translateX(calc(-50% + 80px)) rotate(-37deg);
+}
+.treatment .questions .blur svg {
+  max-width: 615px;
+}
+.treatment-header {
+  background: url("../assets/images/treatment-img_01.jpg") no-repeat 50%/cover;
+  margin-bottom: 100px;
+}
+.treatment-text {
+  position: relative;
+  margin-bottom: 50px;
+}
+.treatment-text:last-child {
+  margin-bottom: 0;
+}
+.treatment-text p {
+  margin-bottom: 15px;
+}
+.treatment-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .treatment .questions .blur {
+    top: -95px;
+    left: 50%;
+    transform: translateX(calc(-50% + 135px)) rotate(144deg);
+    filter: blur(100px);
+  }
+  .treatment .questions .blur svg {
+    max-width: 542px;
+  }
+  .treatment-text {
+    margin-bottom: 90px;
+  }
+  .treatment-text:last-child {
+    margin-bottom: 0;
+  }
+  .treatment-text p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .treatment-text p:last-child {
     margin-bottom: 0;
   }
 }
@@ -5463,6 +5521,52 @@ p {
   }
   .agronom-info__table td:last-child {
     width: calc(100% - 106px);
+  }
+}
+.treatment-hero {
+  padding-top: 170px;
+  position: relative;
+}
+.treatment-hero .blur {
+  top: 236px;
+  left: -158px;
+  transform: rotate(51deg);
+}
+
+@media screen and (max-width: 991px) {
+  .treatment-hero {
+    padding-top: 125px;
+  }
+  .treatment-hero .blur {
+    top: 687px;
+    left: 50%;
+    transform: translateX(calc(-50% - 129px)) rotate(-49deg);
+  }
+}
+.treatment-info {
+  padding-bottom: 125px;
+  position: relative;
+}
+.treatment-info .blur {
+  top: 64px;
+  left: 50%;
+  transform: translateX(calc(-50% - 520px)) rotate(51deg);
+}
+.treatment-info .blur svg {
+  max-width: 771px;
+}
+
+@media screen and (max-width: 991px) {
+  .treatment-info {
+    padding-bottom: 90px;
+  }
+  .treatment-info .blur {
+    top: -11px;
+    left: 50%;
+    transform: translateX(calc(-50% - 99px)) rotate(144deg);
+  }
+  .treatment-info .blur svg {
+    max-width: 542px;
   }
 }
 

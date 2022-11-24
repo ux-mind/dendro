@@ -1,0 +1,26 @@
+.treatment-info {
+	padding-bottom: 125px;
+	position: relative;
+	& .blur {
+		top: 64px;
+		left: 50%;
+		transform: translateX(calc(-50% - 520px)) rotate(51deg);
+		& svg {
+			max-width: 771px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.treatment-info {
+		padding-bottom: 90px;
+		& .blur {
+			top: -11px;
+			left: 50%;
+			transform: translateX(calc(-50% - 99px)) rotate(144deg);
+			& svg {
+				max-width: 542px;
+			}
+		}
+	}
+}

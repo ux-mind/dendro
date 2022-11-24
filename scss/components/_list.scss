@@ -1,4 +1,7 @@
 .list {
+	& p:first-child {
+		margin-bottom: 10px;
+	}
 	& li {
 		padding-left: 15px;
 		position: relative;
