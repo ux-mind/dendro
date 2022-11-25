@@ -1,4 +1,27 @@
 .preparation-info {
+	padding-bottom: 125px;
+	position: relative;
+	& .blur:first-child {
+		top: 0;
+		left: -95px;
+		transform: rotate(51deg);
+		& svg {
+			max-width: 771px;
+		}
+	}
+	& .blur:nth-child(2) {
+		top: auto;
+		bottom: 141px;
+		right: -130px;
+		left: auto;
+		transform: rotate(51deg);
+		& svg {
+			max-width: 771px;
+		}
+	}
+	& .blur:nth-child(3) {
+		display: none;
+	}
 	&-content {
 		display: grid;
 		grid-gap: 50px;
@@ -19,6 +42,33 @@
 
 @media screen and (max-width: 991px) {
 	.preparation-info {
+		padding-bottom: 90px;
+		& .blur:first-child {
+			top: -11px;
+			left: 50%;
+			transform: translateX(calc(-50% + 98px)) rotate(144deg);
+			& svg {
+				max-width: 542px;
+			}
+		}
+		& .blur:nth-child(2) {
+			bottom: 0;
+			right: auto;
+			left: 50%;
+			transform: translateX(calc(-50% - 140px)) rotate(144deg);
+			& svg {
+				max-width: 542px;
+			}
+		}
+		& .blur:nth-child(3) {
+			display: block;
+			top: 50%;
+			left: 50%;
+			transform: translate(calc(-50% + 147px), calc(-50% - 150px)) rotate(144deg);
+			& svg {
+				max-width: 542px;
+			}
+		}
 		&-content {
 			grid-gap: 40px;
 			&__title {

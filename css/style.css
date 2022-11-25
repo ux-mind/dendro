@@ -5496,6 +5496,9 @@ p {
 .agronom-info .blur {
   display: none;
 }
+.agronom-info__wrapper {
+  position: relative;
+}
 .agronom-info__list {
   margin-top: 50px;
 }
@@ -5645,6 +5648,31 @@ p {
     transform: translateX(calc(-50% - 129px)) rotate(-49deg);
   }
 }
+.preparation-info {
+  padding-bottom: 125px;
+  position: relative;
+}
+.preparation-info .blur:first-child {
+  top: 0;
+  left: -95px;
+  transform: rotate(51deg);
+}
+.preparation-info .blur:first-child svg {
+  max-width: 771px;
+}
+.preparation-info .blur:nth-child(2) {
+  top: auto;
+  bottom: 141px;
+  right: -130px;
+  left: auto;
+  transform: rotate(51deg);
+}
+.preparation-info .blur:nth-child(2) svg {
+  max-width: 771px;
+}
+.preparation-info .blur:nth-child(3) {
+  display: none;
+}
 .preparation-info-content {
   display: grid;
   grid-gap: 50px;
@@ -5664,6 +5692,35 @@ p {
 }
 
 @media screen and (max-width: 991px) {
+  .preparation-info {
+    padding-bottom: 90px;
+  }
+  .preparation-info .blur:first-child {
+    top: -11px;
+    left: 50%;
+    transform: translateX(calc(-50% + 98px)) rotate(144deg);
+  }
+  .preparation-info .blur:first-child svg {
+    max-width: 542px;
+  }
+  .preparation-info .blur:nth-child(2) {
+    bottom: 0;
+    right: auto;
+    left: 50%;
+    transform: translateX(calc(-50% - 140px)) rotate(144deg);
+  }
+  .preparation-info .blur:nth-child(2) svg {
+    max-width: 542px;
+  }
+  .preparation-info .blur:nth-child(3) {
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(calc(-50% + 147px), calc(-50% - 150px)) rotate(144deg);
+  }
+  .preparation-info .blur:nth-child(3) svg {
+    max-width: 542px;
+  }
   .preparation-info-content {
     grid-gap: 40px;
   }

@@ -5,6 +5,9 @@
 	& .blur {
 		display: none;
 	}
+	&__wrapper {
+		position: relative;
+	}
 	&__list {
 		margin-top: 50px;
 		&:first-child {
