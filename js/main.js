@@ -357,14 +357,20 @@ function handleTestimonialContent() {
 }
 
 function handleApplicationModal() {
-  const btn = document.querySelector('#application-modal-btn');
+  const btns = document.querySelectorAll('#application-modal-btn');
   const modal = document.querySelector('#application-modal');
 
-  if (btn && modal) {
-    btn.onclick = () => {
-      modal.classList.add('opened');
-      blocker.classList.add('blocker_opened');
-    };
+  if (btns[0] && modal) {
+    btns.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        if (e.target.matches('a')) {
+          e.preventDefault();
+        }
+
+        modal.classList.add('opened');
+        blocker.classList.add('blocker_opened');
+      });
+    });
   }
 }
 

@@ -1,0 +1,46 @@
+.preparation-info {
+	&-content {
+		display: grid;
+		grid-gap: 50px;
+		&__title {
+			margin-bottom: -10px;
+			@include font(3.2rem, calc(38 / 32));
+		}
+		&__wrapper {
+			display: grid;
+			grid-gap: 30px;
+			grid-template-columns: 3.69fr 7.71fr;
+		}
+		& .agronom-text {
+			margin: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.preparation-info {
+		&-content {
+			grid-gap: 40px;
+			&__title {
+				@include font(2.6rem, calc(31 / 26));
+			}
+			&__wrapper {
+				grid-template-columns: 100%;
+				grid-gap: 20px;
+			}
+		}
+		&__img {
+			order: 1;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.preparation-info {
+		&__img {
+			& img {
+				width: 100%;
+			}
+		}
+	}
+}

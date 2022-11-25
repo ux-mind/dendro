@@ -1,4 +1,4 @@
-.agronom {
+.preparation {
 	overflow: hidden;
 	& .questions {
 		& .blur {
@@ -12,7 +12,7 @@
 		}
 	}
 	&-header {
-		background: image('agronom-img_01.jpg') no-repeat 50% / cover;
+		background: image('preparation-img_01.jpg') no-repeat 50% / cover;
 		margin-bottom: 100px;
 	}
 	&-text {
@@ -24,14 +24,11 @@
 				margin-bottom: 0;
 			}
 		}
-		& .title {
-			margin-bottom: 20px;
-		}
 	}
 }
 
 @media screen and (max-width: 991px) {
-	.agronom {
+	.preparation {
 		& .questions {
 			& .blur {
 				top: -95px;
@@ -45,10 +42,6 @@
 			}
 		}
 		&-text {
-			& .title {
-				margin-bottom: 20px;
-				@include font(2rem, calc(24 / 20));
-			}
 			& p {
 				@include font(1.4rem, calc(21 / 14));
 				margin-bottom: 10px;

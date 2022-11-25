@@ -1453,6 +1453,7 @@ p {
   grid-gap: 20px;
 }
 .services-mobile-content a {
+  flex-shrink: 0;
   color: #1e1e1e;
   font-weight: 600;
   font-size: 1.4rem;
@@ -1774,6 +1775,9 @@ p {
 .agronom-text p:last-child {
   margin-bottom: 0;
 }
+.agronom-text .title {
+  margin-bottom: 20px;
+}
 
 @media screen and (max-width: 991px) {
   .agronom .questions .blur {
@@ -1785,6 +1789,11 @@ p {
   }
   .agronom .questions .blur svg {
     max-width: 542px;
+  }
+  .agronom-text .title {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    line-height: 1.2;
   }
   .agronom-text p {
     font-size: 1.4rem;
@@ -1846,6 +1855,53 @@ p {
     margin-bottom: 10px;
   }
   .treatment-text p:last-child {
+    margin-bottom: 0;
+  }
+}
+.preparation {
+  overflow: hidden;
+}
+.preparation .questions .blur {
+  filter: blur(150px);
+  top: auto;
+  bottom: -40px;
+  transform: translateX(calc(-50% + 80px)) rotate(-37deg);
+}
+.preparation .questions .blur svg {
+  max-width: 615px;
+}
+.preparation-header {
+  background: url("../assets/images/preparation-img_01.jpg") no-repeat 50%/cover;
+  margin-bottom: 100px;
+}
+.preparation-text {
+  position: relative;
+  margin-bottom: 90px;
+}
+.preparation-text p {
+  margin-bottom: 15px;
+}
+.preparation-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .preparation .questions .blur {
+    top: -95px;
+    bottom: auto;
+    left: 50%;
+    transform: translateX(calc(-50% + 135px)) rotate(144deg);
+    filter: blur(100px);
+  }
+  .preparation .questions .blur svg {
+    max-width: 542px;
+  }
+  .preparation-text p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+  .preparation-text p:last-child {
     margin-bottom: 0;
   }
 }
@@ -5567,6 +5623,140 @@ p {
   }
   .treatment-info .blur svg {
     max-width: 542px;
+  }
+}
+.preparation-hero {
+  padding-top: 170px;
+  position: relative;
+}
+.preparation-hero .blur {
+  top: 236px;
+  left: -158px;
+  transform: rotate(51deg);
+}
+
+@media screen and (max-width: 991px) {
+  .preparation-hero {
+    padding-top: 125px;
+  }
+  .preparation-hero .blur {
+    top: 687px;
+    left: 50%;
+    transform: translateX(calc(-50% - 129px)) rotate(-49deg);
+  }
+}
+.preparation-info-content {
+  display: grid;
+  grid-gap: 50px;
+}
+.preparation-info-content__title {
+  margin-bottom: -10px;
+  font-size: 3.2rem;
+  line-height: 1.1875;
+}
+.preparation-info-content__wrapper {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 3.69fr 7.71fr;
+}
+.preparation-info-content .agronom-text {
+  margin: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .preparation-info-content {
+    grid-gap: 40px;
+  }
+  .preparation-info-content__title {
+    font-size: 2.6rem;
+    line-height: 1.1923076923;
+  }
+  .preparation-info-content__wrapper {
+    grid-template-columns: 100%;
+    grid-gap: 20px;
+  }
+  .preparation-info__img {
+    order: 1;
+  }
+}
+@media screen and (max-width: 576px) {
+  .preparation-info__img img {
+    width: 100%;
+  }
+}
+.preparation-table__wrapper {
+  padding-top: 25px;
+  overflow-y: auto;
+}
+.preparation-table .table__row:last-child td:first-child {
+  text-align: left;
+}
+.preparation-table th {
+  padding: 15px 20px;
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+.preparation-table th:last-child {
+  text-align: center;
+}
+.preparation-table td {
+  width: 50%;
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+.preparation-table td:last-child {
+  text-align: center;
+}
+.preparation-table.lawn th:nth-last-child(2) {
+  text-align: center;
+}
+.preparation-table.lawn td {
+  width: auto;
+}
+.preparation-table.lawn td:first-child {
+  width: 78.8888888889%;
+}
+.preparation-table.lawn td:nth-child(2) {
+  width: 7.7777777778%;
+}
+.preparation-table.lawn td:last-child {
+  width: 13.3333333333%;
+}
+.preparation-table.lawn td:nth-last-child(2) {
+  text-align: center;
+}
+
+@media screen and (max-width: 991px) {
+  .preparation-table.lawn td:first-child {
+    width: 45%;
+  }
+  .preparation-table.lawn td:nth-child(2) {
+    width: 20%;
+  }
+  .preparation-table.lawn td:last-child {
+    width: 35%;
+  }
+  .preparation-table.lawn td:nth-last-child(2) {
+    text-align: center;
+  }
+  .preparation-table.clear td:first-child {
+    width: 68%;
+  }
+  .preparation-table.clear td:last-child {
+    width: 32%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .preparation-table.lawn {
+    min-width: 429px;
+  }
+  .preparation-table__wrapper.lawn-wrapper {
+    overflow-y: auto;
+    margin-right: -20px;
+    max-width: calc(100vw - 20px);
   }
 }
 
