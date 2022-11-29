@@ -1,0 +1,20 @@
+.news-hero {
+	padding-top: 170px;
+	position: relative;
+	& .blur {
+		top: 236px;
+		left: -158px;
+		transform: rotate(51deg);
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.news-hero {
+		padding-top: 133px;
+		& .blur {
+			top: 687px;
+			left: 50%;
+			transform: translateX(calc(-50% - 129px)) rotate(-49deg);
+		}
+	}
+}
