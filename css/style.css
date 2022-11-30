@@ -1343,6 +1343,10 @@ p {
   margin-bottom: 32px;
   max-width: 384px;
 }
+.catalog-page-item__content:hover svg circle,
+.catalog-page-item__content:hover svg path {
+  stroke: #b7d2a2;
+}
 .catalog-page-item__note {
   margin-top: auto;
 }
@@ -2110,6 +2114,111 @@ p {
   }
   .news-article-text p:last-child {
     margin-bottom: 0;
+  }
+}
+.works-page {
+  overflow: hidden;
+  position: relative;
+}
+.works-page .blur {
+  top: 195px;
+  right: -171px;
+  transform: rotate(51deg);
+  filter: blur(150px);
+}
+.works-page .blur svg {
+  max-width: 771px;
+}
+.works-page-wrapper {
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+.works-page-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  text-decoration: none;
+  color: #fff;
+  background: #1e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.works-page-item:hover svg path, .works-page-item:hover svg circle {
+  stroke: #b7d2a2;
+}
+.works-page-item__note {
+  margin-bottom: 48px;
+}
+.works-page-item__note p {
+  font-size: 1.4rem;
+  line-height: 1.5714285714;
+}
+.works-page-item__icon {
+  margin-top: auto;
+  display: flex;
+}
+.works-page-item__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  flex-grow: 1;
+  padding: 50px;
+  max-width: 384px;
+  box-sizing: content-box;
+}
+.works-page-item__content .title {
+  margin-bottom: 20px;
+}
+.works-page-item__img {
+  max-height: 200px;
+}
+.works-page-item__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 991px) {
+  .works-page .blur {
+    top: 264px;
+    right: auto;
+    left: 50%;
+    transform: translateX(calc(-50% - 90px)) rotate(144deg);
+    filter: blur(100px);
+  }
+  .works-page .blur svg {
+    max-width: 542px;
+  }
+  .works-page-wrapper {
+    padding-top: 30px;
+  }
+  .works-page-item__content {
+    padding: 30px;
+  }
+  .works-page-item__content .title {
+    line-height: 1.1923076923;
+  }
+  .works-page-item__note {
+    margin-bottom: 20px;
+  }
+  .works-page-item__icon svg {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .works-page-wrapper {
+    grid-template-columns: 100%;
+    grid-gap: 30px;
+  }
+  .works-page-item {
+    border-radius: 5px;
   }
 }
 .text_white {

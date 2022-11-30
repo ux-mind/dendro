@@ -72,6 +72,12 @@
 				margin-bottom: 32px;
 				max-width: 384px;
 			}
+			&:hover {
+				svg circle,
+				svg path {
+					stroke: #b7d2a2;
+				}
+			}
 		}
 		&__note {
 			margin-top: auto;
