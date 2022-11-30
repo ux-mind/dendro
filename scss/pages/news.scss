@@ -17,6 +17,16 @@
 	}
 	&-block {
 		padding-bottom: 157px;
+		& .blur {
+			right: -153px;
+			left: auto;
+			top: auto;
+			bottom: 145px;
+			transform: rotate(-37deg);
+			& svg {
+				max-width: 615px;
+			}
+		}
 		& .tabs {
 			margin-top: 60px;
 		}
@@ -74,6 +84,9 @@
 		}
 		&-block {
 			padding-bottom: 90px;
+			& .blur {
+				display: none;
+			}
 			& .tabs {
 				margin-top: 30px;
 			}

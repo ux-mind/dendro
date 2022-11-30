@@ -51,6 +51,11 @@
 			&-m {
 				display: block;
 			}
+			&-content {
+				& .title_size-l {
+					line-height: 1;
+				}
+			}
 		}
 	}
 }

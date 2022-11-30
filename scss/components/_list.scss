@@ -18,12 +18,38 @@
 			border-radius: 1px;
 		}
 	}
+	&_numbered {
+		& li {
+			display: flex;
+			position: relative;
+			@include font(1.6rem, calc(24 / 16));
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			&::before {
+				content: attr(data-number);
+				position: relative;
+				margin-right: 11px;
+				@include font(1.6rem, calc(24 / 16));
+				font-weight: 600;
+			}
+		}
+	}
 }
 
 @media screen and (max-width: 991px) {
 	.list {
 		& li {
 			@include font(1.4rem, calc(21 / 14));
+		}
+		&_numbered {
+			& li {
+				@include font(1.4rem, calc(21 / 14));
+				&::before {
+					@include font(1.4rem, calc(21 / 14));
+				}
+			}
 		}
 	}
 }

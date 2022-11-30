@@ -1,15 +1,16 @@
-.news-hero {
+.news-article-hero {
 	padding-top: 170px;
 	position: relative;
 	& .blur {
-		top: 236px;
-		left: -158px;
-		transform: rotate(51deg);
+		top: 346px;
+		left: 50%;
+		transform: translateX(calc(-50% + 205px)) rotate(51deg);
+		filter: blur(150px);
 	}
 }
 
 @media screen and (max-width: 991px) {
-	.news-hero {
+	.news-article-hero {
 		padding-top: 133px;
 		& .blur {
 			display: none;

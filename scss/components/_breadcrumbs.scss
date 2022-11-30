@@ -8,11 +8,12 @@
 	&__item {
 		padding-left: 19px;
 		position: relative;
+		display: flex;
 		&::before {
 			@include before(8px, 3px, 3px);
+			top: 9px;
 			background: $black-900;
 			border-radius: 50%;
-			transform: translateY(calc(-50% + 1px));
 		}
 		&:first-child {
 			padding-left: 0;

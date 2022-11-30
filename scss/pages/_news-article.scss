@@ -1,0 +1,68 @@
+.news-article {
+	overflow: hidden;
+	&-header {
+		background: image('news-article-img_01.jpg') no-repeat 50% / cover;
+		margin-bottom: 50px;
+		grid-template-columns: 100%;
+	}
+	&-text {
+		position: relative;
+		margin-bottom: 90px;
+		& p {
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		& .title {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.news-article {
+		& .questions {
+			& .blur {
+				top: -95px;
+				bottom: auto;
+				left: 50%;
+				transform: translateX(calc(-50% + 135px)) rotate(144deg);
+				filter: blur(100px);
+				& svg {
+					max-width: 542px;
+				}
+			}
+		}
+		&-header {
+			display: grid;
+			margin-bottom: 20px;
+			padding: 30px;
+			& .breadcrumbs {
+				margin-bottom: auto;
+				overflow: visible;
+				&__item {
+					max-width: 140px;
+					& span {
+						display: inline-block;
+						max-width: 100%;
+						white-space: initial;
+					}
+				}
+			}
+		}
+		&-text {
+			& .title {
+				margin-bottom: 20px;
+				@include font(2rem, calc(24 / 20));
+			}
+			& p {
+				@include font(1.4rem, calc(21 / 14));
+				margin-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
