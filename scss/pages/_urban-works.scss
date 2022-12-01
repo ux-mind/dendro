@@ -1,0 +1,161 @@
+.urban-works {
+	overflow: hidden;
+	position: relative;
+	padding-top: 170px;
+	& .questions {
+		overflow: visible;
+		border-top: 1px solid $border-dark-color;
+		& .blur {
+			top: auto;
+			bottom: -176px;
+			left: 50%;
+			transform: translateX(calc(-50% - 237px)) rotate(-37deg);
+			max-width: fit-content;
+			max-height: fit-content;
+			& svg {
+				max-width: 615px;
+			}
+		}
+	}
+	&-hero {
+		& .blur {
+			top: 195px;
+			left: auto;
+			right: -171px;
+			transform: rotate(51deg);
+			filter: blur(150px);
+			max-width: fit-content;
+			& svg {
+				max-width: 771px;
+			}
+		}
+	}
+	&-header {
+		background: image('urban-works-img_01.jpg') no-repeat 50% / cover;
+		margin-bottom: 60px;
+	}
+	&-wrapper {
+		padding-top: 40px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 30px;
+	}
+	&-content {
+		position: relative;
+		padding-bottom: 150px;
+		& .blur {
+			top: auto;
+			bottom: 239px;
+			right: -154px;
+			transform: rotate(-37deg);
+			& svg {
+				max-width: 615px;
+			}
+		}
+		& .tabs {
+			margin-top: 60px;
+		}
+		&__wrapper {
+			position: relative;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			grid-gap: 50px 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.urban-works {
+		padding-top: 133px;
+		& .questions {
+			border-top: none;
+			& .blur {
+				display: none;
+			}
+			&-content {
+				padding-top: 0;
+			}
+		}
+		&-hero {
+			& .blur {
+				top: 466px;
+				right: auto;
+				left: 50%;
+				transform: translateX(calc(-50% + 117px)) rotate(144deg);
+				filter: blur(100px);
+				& svg {
+					max-width: 542px;
+				}
+			}
+		}
+		&-header {
+			padding: 30px;
+			margin-bottom: 50px;
+			@include flex(column);
+			background: image('urban-works-img_01_mobile.jpg') no-repeat 50% / cover;
+			& .breadcrumbs {
+				margin-bottom: auto;
+			}
+			& .section-header-content {
+				flex-grow: 1;
+				margin-bottom: 20px;
+			}
+			& .breadcrumbs__item:last-child span {
+				white-space: initial;
+			}
+			& .section-header-btn__btn {
+				border: none;
+				padding: 0;
+				text-transform: uppercase;
+				position: relative;
+				@include font(1.4rem, calc(17.5 / 14));
+				border-radius: 0;
+				&::before {
+					@include before(0, 100%, 1px);
+					background: $white;
+					top: auto;
+					bottom: 1px;
+				}
+				&:hover {
+					background: transparent;
+					font-style: italic;
+					color: $white;
+				}
+			}
+		}
+		&-content {
+			padding-bottom: 90px;
+			& .blur {
+				bottom: -24px;
+				top: auto;
+				right: auto;
+				left: 50%;
+				transform: translateX(calc(-50% - 75px)) rotate(144deg);
+				filter: blur(150px);
+				& svg {
+					max-width: 542px;
+				}
+			}
+			& .tabs {
+				margin-top: 40px;
+			}
+			&__wrapper {
+				grid-template-columns: 1fr 1fr;
+				grid-gap: 30px;
+			}
+		}
+		&-wrapper {
+			padding-top: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.urban-works {
+		&-content {
+			&__wrapper {
+				grid-template-columns: 100%;
+			}
+		}
+	}
+}

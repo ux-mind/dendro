@@ -1,0 +1,62 @@
+.urban-works-item {
+	padding-bottom: 25px;
+	border-bottom: 1px solid $border-dark-color;
+	&:hover {
+		cursor: pointer;
+		& .urban-works-item__img {
+			& img {
+				transform: scale(1.1);
+			}
+		}
+		& .title {
+			font-style: italic;
+		}
+	}
+	&__title {
+		margin-bottom: 8px;
+		@include font(1.8rem, 1);
+		color: $black-900;
+	}
+	&__address {
+		@include font(1.4rem, 1);
+		color: $dark-600;
+	}
+	&__img {
+		margin-bottom: 30px;
+		overflow: hidden;
+		& img {
+			transition: transform 0.3s;
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.urban-works-item {
+		padding-bottom: 20px;
+		&:hover {
+			& .urban-works-item__text {
+				&::after {
+					background: icon('arrow-right-green.svg') no-repeat 50% / cover;
+				}
+			}
+		}
+		&__text {
+			position: relative;
+			&::after {
+				@include after(0, 37px, 18px);
+				background: icon('arrow-right.svg') no-repeat 50% / cover;
+			}
+		}
+		&__title {
+			@include font(1.8rem, calc(24 / 18));
+			margin-bottom: 7px;
+		}
+		&__address {
+			@include font(1.4rem, calc(18 / 14));
+		}
+		&__img {
+			margin-bottom: 20px;
+		}
+	}
+}
