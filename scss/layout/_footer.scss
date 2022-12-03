@@ -114,7 +114,12 @@
 		&-logo {
 			@include flex(row, center, space-between);
 			padding-bottom: 40px;
-			// border-bottom: 1px solid $border-light-color;
+			& .logo {
+				min-width: 219px;
+				& img {
+					width: 100%;
+				}
+			}
 		}
 		&__top {
 			&-btn {

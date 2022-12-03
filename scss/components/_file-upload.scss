@@ -1,0 +1,38 @@
+.file-upload {
+	position: relative;
+	@include flex(row, center);
+	&__icon {
+		width: 45px;
+		height: 45px;
+		border: 1px solid $border-dark-color;
+		border-radius: 50%;
+		display: grid;
+		place-items: center;
+		margin-right: 16px;
+	}
+	& p {
+		@include font(1.6rem, calc(24 / 16));
+		font-weight: 400;
+	}
+	&:hover {
+		cursor: pointer;
+		& .file-upload__icon {
+			border-color: $black-900;
+			background: $black-900;
+			& svg path {
+				fill: $white;
+			}
+		}
+		& p {
+			font-style: italic;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.file-upload {
+		& p {
+			@include font(1.4rem, calc(21 / 14));
+		}
+	}
+}

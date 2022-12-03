@@ -45,7 +45,7 @@
 		padding-bottom: 150px;
 		& .blur {
 			top: auto;
-			bottom: 239px;
+			bottom: 389px;
 			right: -154px;
 			transform: rotate(-37deg);
 			& svg {
@@ -131,7 +131,7 @@
 				right: auto;
 				left: 50%;
 				transform: translateX(calc(-50% - 75px)) rotate(144deg);
-				filter: blur(150px);
+				filter: blur(160px);
 				& svg {
 					max-width: 542px;
 				}

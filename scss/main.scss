@@ -7,13 +7,13 @@
 // Import Components
 @import './components/button', './components/title', './components/arrow', './components/container',
 	'./components/social-icon', './components/link', './components/modal', './components/modal-fixed',
-	'./components/input', './components/list';
+	'./components/input', './components/list', './components/file-upload';
 // Import Layout
 @import './layout/section', './layout/header', './layout/hero', './layout/footer', './layout/main';
 // Import Pages
 @import './pages/home', './pages/catalog', './pages/catalog-section', './pages/product-page', './pages/services',
 	'./pages/delivery', './pages/planting', './pages/agronom', './pages/treatment', './pages/preparation',
-	'./pages/news.scss', './pages/news-article', './pages/works-page', './pages/urban-works';
+	'./pages/news.scss', './pages/news-article', './pages/works-page', './pages/urban-works', './pages/providers-page';
 // Import Components
 @import './components/text', './components/blocker', './components/hit.scss', './components/table',
 	'./components/breadcrumbs', './components/catalog', './components/hamburger', './components/dropdown.scss',
