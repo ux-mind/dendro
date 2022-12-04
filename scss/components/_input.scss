@@ -10,6 +10,10 @@
 		color: rgba($white, 0.6);
 		@include font(1.6rem, calc(24 / 16));
 	}
+	&:hover,
+	&:focus {
+		border-color: $border-light-hover-color;
+	}
 	&_hidden {
 		display: none;
 	}
@@ -18,6 +22,10 @@
 		color: $black-900;
 		&::placeholder {
 			color: $dark-590;
+		}
+		&:hover,
+		&:focus {
+			border-color: $border-dark-hover-color;
 		}
 	}
 }

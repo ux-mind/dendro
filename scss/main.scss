@@ -14,7 +14,7 @@
 @import './pages/home', './pages/catalog', './pages/catalog-section', './pages/product-page', './pages/services',
 	'./pages/delivery', './pages/planting', './pages/agronom', './pages/treatment', './pages/preparation',
 	'./pages/news.scss', './pages/news-article', './pages/works-page', './pages/urban-works', './pages/providers-page',
-	'./pages/designers-page', './pages/winners-page', './pages/error-page';
+	'./pages/designers-page', './pages/winners-page', './pages/error-page', './pages/contact-page';
 // Import Components
 @import './components/text', './components/blocker', './components/hit.scss', './components/table',
 	'./components/breadcrumbs', './components/catalog', './components/hamburger', './components/dropdown.scss',
@@ -30,4 +30,5 @@
 	'./components/agronom-hero', './components/agronom-info', './components/treatment-hero',
 	'./components/treatment-info', './components/preparation-hero', './components/preparation-info',
 	'./components/preparation-table', './components/news-hero', './components/news-item',
-	'./components/news-article-hero', './components/news-article-content', './components/urban-works-item';
+	'./components/news-article-hero', './components/news-article-content', './components/urban-works-item',
+	'./components/contact-info';

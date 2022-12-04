@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   font-size: 62.5%;
 }
@@ -554,6 +555,9 @@ p {
   font-size: 1.6rem;
   line-height: 1.5;
 }
+.input:hover, .input:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
 .input_hidden {
   display: none;
 }
@@ -563,6 +567,9 @@ p {
 }
 .input_dark::placeholder {
   color: #595959;
+}
+.input_dark:hover, .input_dark:focus {
+  border-color: rgba(30, 30, 30, 0.5);
 }
 
 @media screen and (max-width: 991px) {
@@ -2836,6 +2843,94 @@ p {
   .error-page__subtitle {
     max-width: 246px;
     text-align: center;
+  }
+}
+.contact-page {
+  padding-top: 160px;
+  position: relative;
+  overflow: hidden;
+}
+.contact-page .breadcrumbs {
+  margin-bottom: 14px;
+}
+.contact-page .questions {
+  border-top: 1px solid rgba(30, 30, 30, 0.2);
+  overflow: visible;
+}
+.contact-page .questions .blur {
+  top: 140px;
+  left: auto;
+  right: -155px;
+  transform: rotate(-37deg);
+  filter: blur(180px);
+}
+.contact-page .questions .blur svg {
+  max-width: 615px;
+}
+.contact-page__title {
+  margin-bottom: 40px;
+}
+.contact-page-content {
+  padding-bottom: 150px;
+  position: relative;
+}
+.contact-page-content .blur {
+  top: 110px;
+  left: -116px;
+  transform: rotate(51deg);
+}
+.contact-page__map {
+  position: relative;
+  margin-top: 60px;
+}
+.contact-page__map iframe {
+  border: 1px solid rgba(30, 30, 30, 0.2);
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 991px) {
+  .contact-page {
+    padding-top: 123px;
+  }
+  .contact-page .questions {
+    border-top: none;
+  }
+  .contact-page .questions .blur {
+    top: auto;
+    bottom: -120px;
+    right: auto;
+    left: 50%;
+    transform: translateX(calc(-50% - 69px)) rotate(144deg);
+    opacity: 0.82;
+  }
+  .contact-page .questions .blur svg {
+    max-width: 542px;
+  }
+  .contact-page .questions-content {
+    padding-top: 0;
+  }
+  .contact-page__title {
+    margin-bottom: 20px;
+  }
+  .contact-page__map {
+    margin-top: 30px;
+  }
+  .contact-page-content {
+    padding-bottom: 90px;
+  }
+  .contact-page-content .blur {
+    top: 126px;
+    left: 50%;
+    transform: translateX(calc(-50% + 83px)) rotate(144deg);
+    opacity: 0.7;
+  }
+  .contact-page-content .blur svg {
+    max-width: 542px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .contact-page__map iframe {
+    max-height: 178px;
   }
 }
 .text_white {
@@ -5942,7 +6037,9 @@ p {
     grid-gap: 15px;
   }
   .questions-form__submit {
-    padding: 1.142857em 3.0625em 1.357em;
+    padding: 1em 3em 1.0625em;
+    font-size: 1.6rem;
+    line-height: 1.25;
   }
   .questions-form__submit-wrapper {
     padding-top: 15px;
@@ -5997,6 +6094,21 @@ p {
   padding: 40px 34px;
   display: grid;
   grid-gap: 20px;
+}
+.application-modal-form__input {
+  position: relative;
+}
+.application-modal-form__input.error::before {
+  position: absolute;
+  content: "Данное поле обязательно для заполнения";
+  bottom: calc(100% + 3px);
+  left: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+}
+.application-modal-form__input.error input {
+  border-color: rgba(212, 89, 72, 0.5);
 }
 .application-modal-form__check {
   padding-top: 10px;
@@ -7058,6 +7170,153 @@ p {
   }
   .urban-works-item__img {
     margin-bottom: 20px;
+  }
+}
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  position: relative;
+}
+.contact-info-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.contact-info-col:last-child .contact-info-col__scheme {
+  display: none;
+}
+.contact-info-col:last-child .contact-info-col__call {
+  align-self: flex-end;
+}
+.contact-info-col:nth-last-child(2) .contact-info-col__contacts {
+  margin-bottom: 25px;
+}
+.contact-info-col__title {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.4444444444;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(30, 30, 30, 0.2);
+  margin-bottom: 10px;
+  width: 100%;
+}
+.contact-info-col__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-bottom: 14px;
+}
+.contact-info-col__contacts:last-child {
+  margin-bottom: 0;
+}
+.contact-info-col__contacts a {
+  color: #1e1e1e !important;
+  font-size: 1.6rem;
+  line-height: 1.4375;
+  text-decoration: none;
+}
+.contact-info-col__contacts a:hover {
+  font-style: italic;
+}
+.contact-info-col__time {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.contact-info-col__time h4 {
+  margin: 0;
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.4375;
+}
+.contact-info-col__time time {
+  font-size: 1.6rem;
+  line-height: 1.4375;
+  margin-bottom: 2px;
+}
+.contact-info-col__time time:last-child {
+  margin-bottom: 0;
+}
+.contact-info-col__time span {
+  color: #818181;
+  font-size: 1.4rem;
+  line-height: 1.2142857143;
+}
+.contact-info-col__scheme {
+  margin-top: auto;
+}
+.contact-info-col__scheme a {
+  font-weight: 700;
+  color: #1e1e1e !important;
+  position: relative;
+  text-decoration: none;
+}
+.contact-info-col__scheme a:hover {
+  font-style: italic;
+}
+.contact-info-col__scheme a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  transform: translateY(-50%);
+  background: #1e1e1e;
+  left: 0;
+  transform: none;
+  top: auto;
+  bottom: 3px;
+}
+.contact-info-col__call .btn {
+  padding: 1.4375em 2.375em 1.5625em;
+}
+
+@media screen and (max-width: 991px) {
+  .contact-info {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-info-col:first-child .contact-info-col__scheme {
+    display: none;
+  }
+  .contact-info-col:last-child .contact-info-col__call {
+    align-self: flex-start;
+  }
+  .contact-info-col:last-child .contact-info-col__scheme {
+    display: block;
+    order: -1;
+    margin: 0;
+    margin-top: 12px;
+    margin-bottom: 30px;
+  }
+  .contact-info-col__call .btn {
+    padding-top: 1.214em;
+    padding-bottom: 1.2857em;
+  }
+}
+@media screen and (max-width: 576px) {
+  .contact-info {
+    grid-gap: 20px;
+    grid-template-columns: 100%;
+  }
+  .contact-info-col:first-child .contact-info-col__contacts {
+    margin-bottom: 0;
+  }
+  .contact-info-col:last-child .contact-info-col__scheme {
+    margin-top: 0;
+    padding-top: 10px;
+  }
+  .contact-info-col__time span {
+    display: inline-block;
+    max-width: 228px;
   }
 }
 

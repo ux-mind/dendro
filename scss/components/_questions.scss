@@ -124,7 +124,8 @@
 		&-form {
 			grid-gap: 15px;
 			&__submit {
-				padding: 1.142857em 3.0625em 1.357em;
+				padding: 1em 3em 1.0625em;
+				@include font(1.6rem, calc(20 / 16));
 				&-wrapper {
 					padding-top: 15px;
 				}
