@@ -5925,6 +5925,9 @@ p {
   left: 50%;
   transform: translateX(calc(-50% - 250px)) rotate(-35deg);
 }
+.questions .error::before {
+  color: rgba(30, 30, 30, 0.6);
+}
 .questions_with-file {
   grid-row-gap: 12px;
   grid-column-gap: 13px;
@@ -6097,18 +6100,6 @@ p {
 }
 .application-modal-form__input {
   position: relative;
-}
-.application-modal-form__input.error::before {
-  position: absolute;
-  content: "Данное поле обязательно для заполнения";
-  bottom: calc(100% + 3px);
-  left: 0;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.6);
-}
-.application-modal-form__input.error input {
-  border-color: rgba(212, 89, 72, 0.5);
 }
 .application-modal-form__check {
   padding-top: 10px;
@@ -7318,6 +7309,24 @@ p {
     display: inline-block;
     max-width: 228px;
   }
+}
+.error {
+  position: relative;
+}
+.error::before {
+  position: absolute;
+  content: "Данное поле обязательно для заполнения";
+  bottom: calc(100% + 1px);
+  left: 3px;
+  font-size: 1.1rem;
+  line-height: 1.4545454545;
+  color: rgba(255, 255, 255, 0.6);
+}
+.error input, .error textarea {
+  border-color: rgba(212, 89, 72, 0.5);
+}
+.error input:hover, .error input:focus, .error textarea:hover, .error textarea:focus {
+  border-color: rgba(212, 89, 72, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

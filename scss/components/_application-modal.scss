@@ -28,19 +28,6 @@
 		grid-gap: 20px;
 		&__input {
 			position: relative;
-			&.error {
-				&::before {
-					position: absolute;
-					content: 'Данное поле обязательно для заполнения';
-					bottom: calc(100% + 3px);
-					left: 0;
-					@include font(1.2rem, calc(18 / 12));
-					color: rgba($white, 0.6);
-				}
-				& input {
-					border-color: rgba($error, 0.5);
-				}
-			}
 		}
 		&__check {
 			padding-top: 10px;

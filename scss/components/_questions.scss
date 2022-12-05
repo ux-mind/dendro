@@ -6,6 +6,11 @@
 		left: 50%;
 		transform: translateX(calc(-50% - 250px)) rotate(-35deg);
 	}
+	& .error {
+		&::before {
+			color: rgba($black-900, 0.6);
+		}
+	}
 	&_with-file {
 		grid-row-gap: 12px;
 		grid-column-gap: 13px;
