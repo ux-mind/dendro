@@ -3,7 +3,7 @@
 	&::before {
 		position: absolute;
 		content: 'Данное поле обязательно для заполнения';
-		bottom: calc(100% + 1px);
+		bottom: calc(100% + 2px);
 		left: 3px;
 		@include font(1.1rem, calc(16 / 11));
 		color: rgba($white, 0.6);

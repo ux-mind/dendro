@@ -7316,7 +7316,7 @@ p {
 .error::before {
   position: absolute;
   content: "Данное поле обязательно для заполнения";
-  bottom: calc(100% + 1px);
+  bottom: calc(100% + 2px);
   left: 3px;
   font-size: 1.1rem;
   line-height: 1.4545454545;
