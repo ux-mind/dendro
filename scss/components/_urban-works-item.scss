@@ -3,6 +3,7 @@
 	border-bottom: 1px solid $border-dark-color;
 	&:hover {
 		cursor: pointer;
+		border-bottom: 1px solid $black-900;
 		& .urban-works-item__img {
 			& img {
 				transform: scale(1.1);

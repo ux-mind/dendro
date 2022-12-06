@@ -1,0 +1,158 @@
+:root {
+	--carousel-slide-width: 100%;
+	--carousel-button-svg-width: 32px;
+	--carousel-button-svg-height: 20px;
+}
+
+.carousel-modal {
+	max-width: 1170px;
+	&-wrapper {
+		position: relative;
+	}
+	&__header {
+		text-align: center;
+		border-bottom: 1px solid $border-light-color;
+		padding: 40px;
+	}
+	&__title {
+		color: $light-100;
+		text-align: center;
+	}
+	&-content {
+		padding: 100px;
+		position: relative;
+	}
+	&-counter {
+		position: absolute;
+		bottom: calc(100% + 13px);
+		@include flex(row, flex-end);
+	}
+	&__main {
+		& .carousel__slide {
+			padding: 0;
+		}
+	}
+	&__nav {
+		margin-top: 40px;
+		& .carousel__track {
+			cursor: auto;
+		}
+		& .carousel__track {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			gap: 40px 30px;
+			transform: none !important;
+			& img {
+				border: 1px solid transparent;
+				margin: 0 auto;
+			}
+		}
+		& .carousel__slide {
+			padding: 0;
+			cursor: pointer;
+			&.is-nav-selected img {
+				border: 1px solid $green-700;
+			}
+		}
+	}
+}
+
+.carousel {
+	position: relative;
+	& .carousel__button {
+		position: absolute;
+		bottom: calc(100% + 25px);
+		left: auto;
+		top: auto;
+		transform: none;
+		width: 32px;
+		height: 20px;
+		&.is-prev {
+			right: 48px;
+		}
+		&.is-next {
+			right: 0;
+		}
+		&:hover svg path {
+			stroke: $green-light-300;
+		}
+	}
+	&-index {
+		margin: 0;
+		@include font(2.6rem, calc(34 / 26));
+		color: $white;
+		margin-right: 5px;
+	}
+	&-count {
+		margin: 0;
+		@include font(1.6rem, calc(21 / 16));
+		color: $white;
+		transform: translateY(-3px);
+	}
+}
+
+@media screen and (max-width: 1220px) {
+	.carousel-modal {
+		max-width: 950px;
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.carousel-modal {
+		max-width: 720px;
+		&__header {
+			padding: 30px 40px;
+		}
+		&__title {
+			@include font(2rem, calc(26 / 20));
+		}
+		&-content {
+			padding: 30px;
+			padding-top: 72px;
+		}
+		&-counter {
+			bottom: calc(100% + 10px);
+		}
+		&__nav {
+			margin-top: 20px;
+			& .carousel__track {
+				grid-gap: 22px;
+				grid-template-columns: repeat(4, 1fr);
+			}
+		}
+	}
+
+	.carousel {
+		& .carousel__button {
+			bottom: calc(100% + 15px);
+			width: 23px;
+			height: 15px;
+			&.is-prev {
+				right: 36px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.carousel-modal {
+		max-width: 528px;
+		&__nav {
+			& .carousel__track {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.carousel-modal {
+		max-width: calc(100% - 40px);
+		width: 100%;
+		&__nav {
+			& .carousel__track {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+	}
+}

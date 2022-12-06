@@ -1,4 +1,57 @@
 'use strict';
+import { Carousel } from 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/carousel.esm.js';
+
+const mainCarousel = new Carousel(document.querySelector('#mainCarousel'), {
+  Dots: false,
+  slidesPerPage: 1,
+  Navigation: {
+    prevTpl: `<svg width="33" height="22" viewBox="0 0 33 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M33 11H1M1 11L11.2128 21M1 11L11.2128 0.999999" stroke="white"/>
+		</svg>
+		`,
+    nextTpl: `<svg width="33" height="22" viewBox="0 0 33 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<path d="M0 11H32M32 11L21.7872 1M32 11L21.7872 21" stroke="white"/>
+		</svg>
+		`,
+  },
+  on: {
+    init: (carousel) => {
+      carousel.$index = document.querySelector('.carousel-index');
+      carousel.$count = document.querySelector('.carousel-count');
+
+      carousel.$index.innerHTML = '01/';
+    },
+    refresh: (carousel) => {
+      if (carousel.$count) {
+        const countString =
+          carousel.pages.length > 9
+            ? `${carousel.pages.length}`
+            : `0${carousel.pages.length}`;
+
+        carousel.$count.innerHTML = countString;
+      }
+    },
+    change: (carousel) => {
+      if (carousel.$index) {
+        const indexString =
+          carousel.page > 9
+            ? `${carousel.page + 1}/`
+            : `0${carousel.page + 1}/`;
+
+        carousel.$index.innerHTML = indexString;
+      }
+    },
+  },
+});
+
+const navCarousel = new Carousel(document.querySelector('#navCarousel'), {
+  Sync: {
+    target: mainCarousel,
+  },
+  Dots: false,
+  infinite: false,
+  Navigation: false,
+});
 
 // Bestsellers swiper
 const bestsellerSwiper = new Swiper('.bestsellers-swiper', {
@@ -291,6 +344,7 @@ function handleFixedModalClose() {
     closeBtn.addEventListener('click', () => {
       el.classList.remove('opened');
       blocker.classList.remove('blocker_opened');
+      document.documentElement.classList.remove('is-locked');
     });
   });
 }
@@ -519,6 +573,22 @@ function politicsCheckboxDisableHandler() {
   });
 }
 
+function handleCarouselModalOpen() {
+  const objectBtns = document.querySelectorAll('.urban-works-item');
+
+  const modal = document.querySelector('#carousel-modal');
+
+  if (modal && objectBtns[0]) {
+    objectBtns.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        modal.classList.add('opened');
+        blocker.classList.add('blocker_opened');
+        document.documentElement.classList.add('is-locked');
+      });
+    });
+  }
+}
+
 // Function for calling all modal handlers
 function callModalHandlers() {
   orderCallHandler();
@@ -530,6 +600,7 @@ function callModalHandlers() {
   handleApplicationModalSumbit();
   questionsFormSubmit();
   politicsCheckboxDisableHandler();
+  handleCarouselModalOpen();
 }
 
 // Function for calling all dropdown handlers
