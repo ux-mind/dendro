@@ -30,9 +30,11 @@
 	&__main {
 		& .carousel__slide {
 			padding: 0;
+			max-height: 530px;
 			& img {
-				max-height: 530px;
+				height: 100%;
 				max-width: 100%;
+				object-fit: cover;
 			}
 		}
 	}
