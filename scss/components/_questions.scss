@@ -1,6 +1,7 @@
 .questions {
 	position: relative;
 	overflow: hidden;
+	max-height: 715px;
 	& .blur {
 		top: -86px;
 		left: 50%;
@@ -12,6 +13,7 @@
 		}
 	}
 	&_with-file {
+		max-height: none;
 		grid-row-gap: 12px;
 		grid-column-gap: 13px;
 		& .questions-form__submit-wrapper {
