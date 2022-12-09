@@ -594,6 +594,19 @@ function handleCarouselModalOpen() {
   }
 }
 
+function handleMapModal() {
+  const mapModalBtn = document.querySelector('#map-modal-btn');
+  const mapModal = document.querySelector('#map-modal');
+
+  if (mapModal && mapModalBtn) {
+    mapModalBtn.onclick = () => {
+      mapModal.classList.toggle('opened');
+      blocker.classList.toggle('blocker_opened');
+      document.documentElement.classList.toggle('is-locked');
+    };
+  }
+}
+
 // Function for calling all modal handlers
 function callModalHandlers() {
   orderCallHandler();
@@ -606,6 +619,7 @@ function callModalHandlers() {
   questionsFormSubmit();
   politicsCheckboxDisableHandler();
   handleCarouselModalOpen();
+  handleMapModal();
 }
 
 // Function for calling all dropdown handlers

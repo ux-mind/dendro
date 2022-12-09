@@ -7288,16 +7288,17 @@ p {
 .contact-info-col__scheme {
   margin-top: auto;
 }
-.contact-info-col__scheme a {
+.contact-info-col__scheme button, .contact-info-col__scheme select, .contact-info-col__scheme input, .contact-info-col__scheme textarea {
+  display: inline;
   font-weight: 700;
   color: #1e1e1e !important;
   position: relative;
   text-decoration: none;
 }
-.contact-info-col__scheme a:hover {
+.contact-info-col__scheme button:hover, .contact-info-col__scheme select:hover, .contact-info-col__scheme input:hover, .contact-info-col__scheme textarea:hover {
   font-style: italic;
 }
-.contact-info-col__scheme a::before {
+.contact-info-col__scheme button::before, .contact-info-col__scheme select::before, .contact-info-col__scheme input::before, .contact-info-col__scheme textarea::before {
   content: "";
   position: absolute;
   left: 0;
@@ -7526,6 +7527,16 @@ p {
   .carousel-modal__nav .carousel__track {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+.map-modal__wrapper {
+  position: relative;
+}
+.map-modal__wrapper .modal-close__btn {
+  background: #1e1e1e;
+  border-radius: 2px;
+}
+.map-modal__wrapper .modal-close__btn span {
+  top: calc(50% - 1px);
 }
 
 /*# sourceMappingURL=style.css.map */

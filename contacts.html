@@ -279,7 +279,7 @@
 							<a href="mailto:info@dendro-park.ru">info@dendro-park.ru</a>
 						</div>
 						<div class="contact-info-col__scheme">
-							<a href="#">Смотреть схему проезда</a>
+							<button type="button" id="map-modal-btn">Смотреть схему проезда</и>
 						</div>
 					</div>
 					<div class="contact-info-col">
@@ -732,6 +732,17 @@
 					команда Дендропарка
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="modal-fixed map-modal" id="map-modal">
+		<div class="map-modal__wrapper">
+			<div class="modal-close">
+				<button class="modal-close__btn">
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+			<img src="./assets/images/map.jpeg" alt="map" />
 		</div>
 	</div>
 	<!-- Modal windows -->

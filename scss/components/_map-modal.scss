@@ -1,0 +1,12 @@
+.map-modal {
+	&__wrapper {
+		position: relative;
+		& .modal-close__btn {
+			background: $black-900;
+			border-radius: 2px;
+			& span {
+				top: calc(50% - 1px);
+			}
+		}
+	}
+}

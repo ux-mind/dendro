@@ -63,7 +63,8 @@
 		}
 		&__scheme {
 			margin-top: auto;
-			& a {
+			& button {
+				display: inline;
 				font-weight: 700;
 				color: $black-900 !important;
 				position: relative;
