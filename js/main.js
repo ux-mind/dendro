@@ -595,15 +595,17 @@ function handleCarouselModalOpen() {
 }
 
 function handleMapModal() {
-  const mapModalBtn = document.querySelector('#map-modal-btn');
+  const mapModalBtns = document.querySelectorAll('#map-modal-btn');
   const mapModal = document.querySelector('#map-modal');
 
-  if (mapModal && mapModalBtn) {
-    mapModalBtn.onclick = () => {
-      mapModal.classList.toggle('opened');
-      blocker.classList.toggle('blocker_opened');
-      document.documentElement.classList.toggle('is-locked');
-    };
+  if (mapModal && mapModalBtns[0]) {
+    mapModalBtns.forEach((btn) => {
+      btn.onclick = () => {
+        mapModal.classList.toggle('opened');
+        blocker.classList.toggle('blocker_opened');
+        document.documentElement.classList.toggle('is-locked');
+      };
+    });
   }
 }
 

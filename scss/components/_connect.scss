@@ -79,7 +79,8 @@
 			}
 			&__scheme {
 				margin-top: auto;
-				& a {
+				& a,
+				& button {
 					text-transform: none;
 					text-decoration: none;
 					color: $black-900;

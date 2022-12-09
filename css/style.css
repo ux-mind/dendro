@@ -4709,7 +4709,7 @@ p {
 .connect-ways-address__scheme {
   margin-top: auto;
 }
-.connect-ways-address__scheme a {
+.connect-ways-address__scheme a, .connect-ways-address__scheme button, .connect-ways-address__scheme select, .connect-ways-address__scheme input, .connect-ways-address__scheme textarea {
   text-transform: none;
   text-decoration: none;
   color: #1e1e1e;
