@@ -55,6 +55,10 @@
 		}
 		&__image {
 			margin-bottom: 15px;
+			width: 100%;
+			min-height: 306px;
+			max-height: 306px;
+			object-fit: cover;
 		}
 		&__info {
 			@include flex(row, flex-start, space-between);
@@ -130,6 +134,18 @@
 		&-list {
 			grid-template-columns: 1fr 1fr;
 			grid-column-gap: 16px;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.catalog-chapter {
+		&-item {
+			flex-grow: 1;
+			&__image {
+				min-height: 201px;
+				max-height: 201px;
+			}
 		}
 	}
 }
