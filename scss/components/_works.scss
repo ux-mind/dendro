@@ -36,7 +36,7 @@
 		}
 	}
 	&-additionals {
-		@include flex(column);
+		@include flex(column, stretch);
 		&-top {
 			width: 100%;
 			@include flex(row, center);

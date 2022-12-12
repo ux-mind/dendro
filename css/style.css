@@ -133,6 +133,11 @@ p {
   color: transparent;
 }
 
+.swiper-button-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
 .blur {
   pointer-events: none;
   position: absolute;
@@ -4279,7 +4284,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: stretch;
   flex-wrap: nowrap;
 }
 .works-additionals-top {

@@ -76,10 +76,11 @@ const bestsellerSwiper = new Swiper('.bestsellers-swiper', {
 
 // Works swiper
 const worksSwiperAdditional = new Swiper('.works-swiper-additional', {
-  loop: true,
-  loopedSlides: 3,
+  // loop: true,
+  // loopedSlides: 3,
   slidesPerView: 1,
   spaceBetween: 16,
+  // watchOverflow: false,
   initialSlide: 1,
   navigation: {
     nextEl: '.works-btn-next',
@@ -99,8 +100,9 @@ const worksSwiperAdditional = new Swiper('.works-swiper-additional', {
 });
 
 const worksSwiperMain = new Swiper('.works-swiper-main', {
-  loop: true,
-  loopedSlides: 3,
+  // loop: true,
+  // loopedSlides: 3,
+  // watchOverflow: false,
   spaceBetween: 20,
 });
 
