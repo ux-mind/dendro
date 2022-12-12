@@ -60,7 +60,6 @@ if (mainCarouselElement && navCarouselElement) {
 
 // Bestsellers swiper
 const bestsellerSwiper = new Swiper('.bestsellers-swiper', {
-  loop: true,
   slidesPerView: 2,
   spaceBetween: 16,
   navigation: {

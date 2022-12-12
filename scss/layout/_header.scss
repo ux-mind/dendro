@@ -110,6 +110,7 @@
 				}
 			}
 			&.languages {
+				display: none;
 				& button {
 					@include font(1.1rem, calc(14 / 11));
 					color: $dark-500;

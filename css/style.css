@@ -884,6 +884,9 @@ p {
 .header-top__el.order-a-call::before {
   content: none;
 }
+.header-top__el.languages {
+  display: none;
+}
 .header-top__el.languages button, .header-top__el.languages select, .header-top__el.languages input, .header-top__el.languages textarea {
   font-size: 1.1rem;
   line-height: 1.2727272727;
