@@ -7180,9 +7180,6 @@ p {
   cursor: pointer;
   border-bottom: 1px solid #1e1e1e;
 }
-.urban-works-item:hover .urban-works-item__img img {
-  transform: scale(1.1);
-}
 .urban-works-item:hover .title {
   font-style: italic;
 }
@@ -7202,7 +7199,6 @@ p {
   overflow: hidden;
 }
 .urban-works-item__img img {
-  transition: transform 0.3s;
   width: 100%;
 }
 

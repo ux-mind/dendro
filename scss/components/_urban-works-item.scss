@@ -4,11 +4,11 @@
 	&:hover {
 		cursor: pointer;
 		border-bottom: 1px solid $black-900;
-		& .urban-works-item__img {
-			& img {
-				transform: scale(1.1);
-			}
-		}
+		// & .urban-works-item__img {
+		// 	& img {
+		// 		transform: scale(1.1);
+		// 	}
+		// }
 		& .title {
 			font-style: italic;
 		}
@@ -26,7 +26,7 @@
 		margin-bottom: 30px;
 		overflow: hidden;
 		& img {
-			transition: transform 0.3s;
+			// transition: transform 0.3s;
 			width: 100%;
 		}
 	}
