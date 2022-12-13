@@ -1,9 +1,10 @@
 .urban-works-item {
-	padding-bottom: 25px;
-	border-bottom: 1px solid $border-dark-color;
+	// padding-bottom: 25px;
+	// border-bottom: 1px solid $border-dark-color;
 	&:hover {
 		cursor: pointer;
-		border-bottom: 1px solid $black-900;
+		opacity: 0.7;
+		// border-bottom: 1px solid $black-900;
 		// & .urban-works-item__img {
 		// 	& img {
 		// 		transform: scale(1.1);
@@ -23,7 +24,7 @@
 		color: $dark-600;
 	}
 	&__img {
-		margin-bottom: 30px;
+		// margin-bottom: 30px;
 		overflow: hidden;
 		& img {
 			// transition: transform 0.3s;
@@ -34,7 +35,7 @@
 
 @media screen and (max-width: 767px) {
 	.urban-works-item {
-		padding-bottom: 20px;
+		// padding-bottom: 20px;
 		&:hover {
 			& .urban-works-item__text {
 				&::after {
@@ -57,7 +58,7 @@
 			@include font(1.4rem, calc(18 / 14));
 		}
 		&__img {
-			margin-bottom: 20px;
+			// margin-bottom: 20px;
 		}
 	}
 }

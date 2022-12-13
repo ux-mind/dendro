@@ -3777,8 +3777,9 @@ p {
   position: absolute;
   max-width: 370px;
   display: flex;
-  top: 0;
+  top: 50%;
   left: calc(50% + 15px);
+  transform: translateY(-50%);
   z-index: 1;
 }
 .home-catalog-img-2 {
@@ -7177,13 +7178,9 @@ p {
     grid-template-columns: 100%;
   }
 }
-.urban-works-item {
-  padding-bottom: 25px;
-  border-bottom: 1px solid rgba(30, 30, 30, 0.2);
-}
 .urban-works-item:hover {
   cursor: pointer;
-  border-bottom: 1px solid #1e1e1e;
+  opacity: 0.7;
 }
 .urban-works-item:hover .title {
   font-style: italic;
@@ -7200,7 +7197,6 @@ p {
   color: #616161;
 }
 .urban-works-item__img {
-  margin-bottom: 30px;
   overflow: hidden;
 }
 .urban-works-item__img img {
@@ -7208,9 +7204,6 @@ p {
 }
 
 @media screen and (max-width: 767px) {
-  .urban-works-item {
-    padding-bottom: 20px;
-  }
   .urban-works-item:hover .urban-works-item__text::after {
     background: url("../assets/icons/arrow-right-green.svg") no-repeat 50%/cover;
   }
@@ -7235,9 +7228,6 @@ p {
   .urban-works-item__address {
     font-size: 1.4rem;
     line-height: 1.2857142857;
-  }
-  .urban-works-item__img {
-    margin-bottom: 20px;
   }
 }
 .contact-info {
