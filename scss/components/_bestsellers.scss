@@ -32,6 +32,12 @@
 	&-swiper {
 		padding-left: 18px;
 		margin-left: -18px;
+		& .swiper-wrapper {
+			align-items: stretch;
+		}
+		& .swiper-slide {
+			height: auto;
+		}
 	}
 	&-prev,
 	&-next {
@@ -48,8 +54,11 @@
 		}
 	}
 	&-item {
+		height: 100%;
+		display: block;
 		text-decoration: none;
 		position: relative;
+		@include flex(column);
 		&:hover {
 			& .bestsellers-item__info {
 				border-color: $white;
@@ -60,9 +69,14 @@
 			left: -35px;
 		}
 		&__image {
+			min-height: 420px;
+			width: 100%;
+			object-fit: cover;
 			margin-bottom: 25px;
 		}
 		&__info {
+			flex-grow: 1;
+			width: 100%;
 			@include flex(row, flex-start, space-between);
 			padding-bottom: 24px;
 			border-bottom: 1px solid $border-light-color;
@@ -147,6 +161,16 @@
 			}
 			&__image {
 				margin-bottom: 11px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.bestsellers {
+		&-item {
+			&__image {
+				min-height: 201px;
 			}
 		}
 	}
