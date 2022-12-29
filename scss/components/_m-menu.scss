@@ -3,7 +3,7 @@
 	z-index: 5;
 	bottom: 0;
 	left: 0;
-	height: 100vh;
+	height: calc(100vh - 113px);
 	width: 100vw;
 	pointer-events: none;
 	background: $black-900;
@@ -16,7 +16,7 @@
 		transform: none;
 	}
 	&-wrapper {
-		padding-top: 113px;
+		// padding-top: 113px;
 		position: relative;
 		padding-bottom: 165px;
 		overflow: hidden;

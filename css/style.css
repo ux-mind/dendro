@@ -3512,7 +3512,7 @@ p {
   z-index: 5;
   bottom: 0;
   left: 0;
-  height: 100vh;
+  height: calc(100vh - 113px);
   width: 100vw;
   pointer-events: none;
   background: #1e1e1e;
@@ -3526,7 +3526,6 @@ p {
   transform: none;
 }
 .m-menu-wrapper {
-  padding-top: 113px;
   position: relative;
   padding-bottom: 165px;
   overflow: hidden;
